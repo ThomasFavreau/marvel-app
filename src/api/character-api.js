@@ -1,20 +1,24 @@
 import characters from '../data/characters.json';
 
-///create a function to retrieve characters
+/**
+ * List of characters
+ * @returns {Array} characters
+ */
 export const getCharacters = () => {
-    return characters
+    return characters;
 }
 
 /**
- * Get a character by id
+ * get character by id
  * @param {number} id
- * @returns {object} character
+ * @returns {Object} character
  */
 
-export const getCharactersById = (id) => {
+
+export const getCharacterById = (id) => {
     const character = characters.find(character => character.id === id);
     if (!character) {
         throw new Error(`Character with id ${id} not found`);
     }
-    return character
+    return character;
 }
