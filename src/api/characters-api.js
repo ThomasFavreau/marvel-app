@@ -16,6 +16,8 @@ export const getCharacters = () => {
 
 
 export const getCharacterById = (id) => {
+
+    console.log(id)
     const character = characters.find(character => character.id === id);
     if (!character) {
         throw new Error(`Character with id ${id} not found`);
