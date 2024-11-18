@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import CharacterDetail from '../components/CharacterDetail'; // Assurez-vous d'importer ce composant
+import CharacterDetail from '../pages/CharacterDetail'; // Assurez-vous d'importer ce composant
 
 const CharacterDetailPage = () => {
     const character = useLoaderData();
