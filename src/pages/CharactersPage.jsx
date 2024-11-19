@@ -1,21 +1,36 @@
-// CetteCette façon de faire fonctionne, mais elle n'est pas optimale. Elle mélange la récupération des données et l'affichage des composants.
-// react_router nous permet de faire mieux en utilisant des hooks pour récupérer les données avant d'afficher le composant et ainsi de séparer récupération des données et affichage.
-// Adapter le code pour utiliser react_router et les hooks comme dans l'exemple du guide, grâce aux concepts de loader et useLoaderData . On appelera directement la fonction getCharacters dans le loader (pas de fonction fetch ).
-
-import React from 'react';
-import {CharactersList} from '../components/CharactersList';
-import {NumberOfCharacters} from '../components/NumberOfCharacters';
-import { useLoaderData } from "react-router";
+import React, { useState, useEffect } from 'react';
+import { CharactersList } from "../components/CharactersList";
+import { NumberOfCharacters } from "../components/NumberOfCharacters";
+import { useLoaderData, useSearchParams } from 'react-router-dom';
 
 const CharactersPage = () => {
-    document.title = 'Marvel App';
+    // Change the title of the page
+    document.title = "Marvel App";
 
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [sort, setSort] = useState(searchParams.get('sort') || 'name');
+    const [order, setOrder] = useState(searchParams.get('order') || 'asc');
     const characters = useLoaderData();
 
-    
+    useEffect(() => {
+        setSearchParams({ sort, order });
+    }, [sort, order, setSearchParams]);
+
     return (
         <>
             <h2>Marvel Characters</h2>
+            <div>
+                <label htmlFor="sort">Sort by: </label>
+                <select id="sort" value={sort} onChange={(e) => setSort(e.target.value)}>
+                    <option value="name">Name</option>
+                    <option value="modified">Date Modified</option>
+                </select>
+                <label htmlFor="order">Order: </label>
+                <select id="order" value={order} onChange={(e) => setOrder(e.target.value)}>
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </div>
             <CharactersList characters={characters} />
             <br />
             <NumberOfCharacters characters={characters} />
@@ -23,4 +38,4 @@ const CharactersPage = () => {
     );
 };
 
-export default CharactersPage
+export default CharactersPage;

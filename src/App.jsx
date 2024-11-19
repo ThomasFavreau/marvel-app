@@ -1,6 +1,7 @@
 import './App.css'
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import routes from './Routes'
+import routes from './routes'
 
 // Create a router that uses the client side history strategy for
 const router = createBrowserRouter(routes)
@@ -10,4 +11,5 @@ function App() {
     <RouterProvider router={router} />
   )
 }
+
 export default App
