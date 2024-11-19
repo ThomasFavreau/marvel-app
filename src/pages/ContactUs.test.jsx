@@ -1,26 +1,18 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ContactPage from './ContactUs';
+import ContactPage from './ContactPage';
 
 describe('ContactPage', () => {
-    test('renders Contact Us heading', () => {
-        const { getByText } = render(<ContactPage />);
-
-        screen.debug();
-        const headingElement = screen.getByRole('heading', { level:2, name: "Contact Us" });
-        expect(headingElement).toBeInTheDocument();
-    });
-
-    test('renders contact email link', () => {
-        const { getByText } = render(<ContactPage />);
-        const emailLinkElement = getByText(/marvelApp@gmail.com/i);
-        expect(emailLinkElement).toBeInTheDocument();
-        expect(emailLinkElement).toHaveAttribute('href', 'mailto:marvelApp@gmail.com');
-    });
-
-    test('sets document title correctly', () => {
+    test('sets the document title correctly', () => {
         render(<ContactPage />);
-        expect(document.title).toBe('Contact Us | Marvel Characters');
+        expect(document.title).toBe('Contact | Marvel App');
+    
+        const headingElement = screen.getByRole('heading', { level: 2, name: 'Contact Us' });
+        expect(headingElement).toBeInTheDocument();
+    
+        const paragraphElement = screen.getByText(/Feel free to contact us at/i);
+        expect(paragraphElement).toBeInTheDocument();
+        const linkElement = screen.getByRole('link', { name: 'marvelApp@gmail.com' });
+        expect(linkElement).toHaveAttribute('href', 'mailto:marvelApp@gmail.com');
     });
 });
