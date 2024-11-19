@@ -3,20 +3,14 @@ import { render, screen } from '@testing-library/react';
 import AboutPage from './AboutPage';
 
 describe('AboutPage', () => {
-    test('renders About Us heading', () => {
+    test('sets the document title correctly', () => {
         render(<AboutPage />);
-        const headingElement = screen.getByText(/About Us/i);
+        expect(document.title).toBe('About | Marvel App');
+    
+        const headingElement = screen.getByRole('heading', { level: 2, name: 'About Us' });
         expect(headingElement).toBeInTheDocument();
-    });
-
-    test('renders paragraph with team description', () => {
-        render(<AboutPage />);
-        const paragraphElement = screen.getByText(/We are a team of Marvel fans who love to create awesome apps !/i);
+    
+        const paragraphElement = screen.getByText('We are a team of Marvel fans who love to create awesome apps!');
         expect(paragraphElement).toBeInTheDocument();
-    });
-
-    test('sets document title to "About | Marvel App"', () => {
-        render(<AboutPage />);
-        expect(document.title).toBe("About | Marvel App");
     });
 });
