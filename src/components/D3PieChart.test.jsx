@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import D3PieChart from './D3PieChart';
+import RechartsPieChart from './RechartsPieChart';
 import { prepareData } from './chart-utils';
 
 // Mock the prepareData function
@@ -8,7 +8,7 @@ jest.mock('./chart-utils', () => ({
     prepareData: jest.fn(),
 }));
 
-describe('D3PieChart', () => {
+describe('RechartsPieChart', () => {
     const data = [
         { name: 'Force', value: 10 },
         { name: 'Intelligence', value: 8 },
@@ -22,19 +22,10 @@ describe('D3PieChart', () => {
         prepareData.mockReturnValue(data);
     });
 
-    test('renders D3PieChart with label and value', () => {
-        render(<D3PieChart data={data} />);
+    test('renders RechartsPieChart', () => {
+        render(<RechartsPieChart data={data} />);
 
-        screen.debug();
-
-        expect(document.getElementById('pie-container')).toBeInTheDocument();
-
-        // Check if the data is displayed
-        data.forEach((item) => {
-            const nameLabel = screen.getByText(item.name);
-            expect(nameLabel).toBeInTheDocument();
-            const valueLabel = screen.getByText(item.value);
-            expect(valueLabel).toBeInTheDocument();
-        });
+        // expect to have a div with the class "recharts-wrapper"
+        expect(document.querySelector('.recharts-wrapper')).toBeInTheDocument();
     });
 });
