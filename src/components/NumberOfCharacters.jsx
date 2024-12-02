@@ -3,5 +3,5 @@ export function NumberOfCharacters({ characters = [] }) {
     return <p>There is no character</p>;
   }
 
-  return <p>There is {characters.length} characters</p>;
+  return <p>There are {characters.length} characters</p>;
 }
