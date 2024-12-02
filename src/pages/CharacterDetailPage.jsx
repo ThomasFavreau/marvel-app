@@ -6,7 +6,6 @@ import D3PieChart from '../components/D3PieChart';
 import RechartsPieChart from '../components/RechartsPieChart';
 
 const CharacterDetailPage = () => {
-    // retrieve the character using the useLoaderData hook
     const character = useLoaderData();
 
     useEffect(() => {

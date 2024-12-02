@@ -4,7 +4,6 @@ import { NumberOfCharacters } from "../components/NumberOfCharacters";
 import { useLoaderData, useSearchParams } from 'react-router-dom';
 
 const CharactersPage = () => {
-    // Change the title of the page
     document.title = "Marvel App";
 
     const [searchParams, setSearchParams] = useSearchParams();
