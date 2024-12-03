@@ -9,12 +9,12 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 6,
-            "intelligence": 9,
+            "force": 5,
+            "intelligence": 8,
             "durability": 6,
-            "energy": 3,
-            "speed": 5,
-            "fighting": 7
+            "energy": 6,
+            "speed": 1,
+            "fighting": 3
         }
     },
     {
@@ -27,18 +27,17 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 8,
-            "intelligence": 8,
-            "durability": 6,
-            "energy": 7,
-            "speed": 7,
-            "fighting": 10
+            "force": 4,
+            "intelligence": 3,
+            "durability": 3,
+            "energy": 1,
+            "speed": 2
+            
         }
     },
     {
         "id": "1009268",
         "name": "Deadpool",
-        "description": "",
         "modified": "2020-04-04T19:02:15-0400",
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/5261a86cacb99",
@@ -46,11 +45,10 @@
         },
         "capacities": {
             "force": 4,
-            "intelligence": 4,
-            "durability": 8,
-            "energy": 6,
-            "speed": 3,
-            "fighting": 8
+            "intelligence": 3,
+            "durability": 2,
+            "energy": 1,
+            "speed": 2
         }
     },
     {
@@ -63,12 +61,11 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 8,
-            "intelligence": 2,
-            "durability": 9,
-            "energy": 4,
-            "speed": 2,
-            "fighting": 6
+            "force": 6,
+            "intelligence": 1,
+            "durability": 7,
+            "energy": 1,
+            "speed": 1
         }
     },
     {
@@ -81,12 +78,11 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 10,
+            "force": 7,
             "intelligence": 6,
-            "durability": 10,
-            "energy": 6,
-            "speed": 3,
-            "fighting": 7
+            "durability": 7,
+            "energy": 1,
+            "speed": 3
         }
     },
     {
@@ -99,12 +95,11 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 8,
-            "intelligence": 10,
-            "durability": 9,
-            "energy": 9,
-            "speed": 7,
-            "fighting": 6
+            "force": 6,
+            "intelligence": 6,
+            "durability": 6,
+            "energy": 6,
+            "speed": 5
         }
     },
     {
@@ -117,12 +112,11 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 3,
-            "intelligence": 8,
-            "durability": 4,
-            "energy": 2,
-            "speed": 3,
-            "fighting": 6
+            "force": 2,
+            "intelligence": 2,
+            "durability": 2,
+            "energy": 1,
+            "speed": 2
         }
     },
     {
@@ -135,66 +129,59 @@
             "extension": "jpg"
         },
         "capacities": {
-            "force": 8,
-            "intelligence": 7,
-            "durability": 10,
-            "energy": 10,
-            "speed": 10,
-            "fighting": 8
+            "force": 6,
+            "intelligence": 4,
+            "durability": 7,
+            "energy": 7,
+            "speed": 7
         }
     },
     {
         "id": "1009697",
         "name": "Thanos",
-        "description": "",
         "modified": "2016-05-05T15:35:19-0400",
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd",
             "extension": "jpg"
         },
         "capacities": {
-            "force": 10,
-            "intelligence": 9,
-            "durability": 10,
-            "energy": 10,
-            "speed": 7,
-            "fighting": 9
+            "force": 7,
+            "intelligence": 6,
+            "durability": 6,
+            "energy": 7,
+            "speed": 6
         }
     },
     {
         "id": "1009663",
         "name": "Thor",
-        "description": "",
         "modified": "2020-03-11T10:18:57-0400",
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
             "extension": "jpg"
         },
         "capacities": {
-            "force": 10,
-            "intelligence": 4,
-            "durability": 10,
-            "energy": 9,
-            "speed": 8,
-            "fighting": 9
+            "force": 7,
+            "intelligence": 2,
+            "durability": 7,
+            "energy": 6,
+            "speed": 7
         }
     },
     {
         "id": "1009718",
         "name": "Wolverine",
-        "description": "",
-        "modified": "2016-05-02T12:21:44-0400",
+        "modified": "20-05-02T12:21:44-0400",
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
             "extension": "jpg"
         },
         "capacities": {
-            "force": 5,
-            "intelligence": 4,
-            "durability": 8,
-            "energy": 3,
-            "speed": 4,
-            "fighting": 10
+            "force": 4,
+            "intelligence": 2,
+            "durability": 4,
+            "energy": 1,
+            "speed": 2
         }
     }
 ]

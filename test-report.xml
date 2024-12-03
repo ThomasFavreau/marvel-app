@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\tfavre06\marvel-app\e2e-tests\marvel.spec.js">
+  <file path="C:\Users\tfavre06\marvel-app\src\api\characters-api.test.js">
+    <testCase name="getCharacters should return characters sorted by name in asc order" duration="14"/>
+    <testCase name="getCharacters should return characters sorted by name in desc order" duration="0"/>
+    <testCase name="getCharacters should return characters sorted by modified in asc order" duration="0"/>
+    <testCase name="getCharacters should return characters sorted by modified in desc order" duration="0"/>
+    <testCase name="getCharacterById should return the character with the given id" duration="1"/>
+    <testCase name="getCharacterById should throw an error if the character with the given id is not found" duration="6"/>
+    <testCase name="fetchCharacters should fetch characters sorted by name in asc order" duration="2"/>
+    <testCase name="fetchCharacters should fetch characters sorted by name in desc order" duration="3"/>
+    <testCase name="fetchCharacters should fetch characters sorted by modified in asc order" duration="0"/>
+    <testCase name="fetchCharacters should fetch characters sorted by modified in desc order" duration="0"/>
+  </file>
+  <file path="C:\Users\tfavre06\marvel-app\src\components\RadarChartCompare.test.jsx">
+    <testCase name="RadarChartCompare renders without crashing" duration="54"/>
+    <testCase name="RadarChartCompare renders the correct number of Radar components" duration="18"/>
+    <testCase name="RadarChartCompare renders the correct number of PolarAngleAxis components" duration="11"/>
+    <testCase name="RadarChartCompare renders the correct number of PolarRadiusAxis components" duration="13"/>
+    <testCase name="RadarChartCompare renders the correct number of Tooltip components" duration="10"/>
+    <testCase name="RadarChartCompare renders the correct number of Legend components" duration="10"/>
+  </file>
+  <file path="C:\Users\tfavre06\marvel-app\src\pages\CompareCharactersPage.test.jsx">
+    <testCase name="CompareCharactersPage renders loading state initially" duration="78"/>
+    <testCase name="CompareCharactersPage renders compare characters page" duration="19"/>
+    <testCase name="CompareCharactersPage renders character options in select elements" duration="34"/>
+    <testCase name="CompareCharactersPage updates radar chart on character selection change" duration="49"/>
   </file>
 </testExecutions>
